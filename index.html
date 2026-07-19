@@ -1033,6 +1033,11 @@
         const GOOGLE_APP_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw3hvnj__xU0SGsuy9gHuEwuBFa2uh4k6KX0z9S8YuoizW5eN5XY_0IuiiUDibBsAY5Pw/exec";
 
         // =========================================================================
+        // WHATSAPP GROUP LINK
+        // =========================================================================
+        const WHATSAPP_GROUP_LINK = "https://chat.whatsapp.com/LaMAUvxJ46ZJajQeABDyi5?s=sh&p=a&mlu=0&ilr=0";
+
+        // =========================================================================
         // DOM ELEMENTS
         // =========================================================================
         const searchInput = document.getElementById('searchName');
@@ -1149,9 +1154,8 @@
 
                 if (!response.ok) throw new Error('Failed to submit data');
 
-                // Success - redirect to WhatsApp
-                const whatsappUrl = `https://wa.me/91${formData.whatsappNumber}?text=Hi%20I%20have%20registered%20for%20DSSC%202026`;
-                window.location.href = whatsappUrl;
+                // Success - redirect to WhatsApp group
+                window.location.href = WHATSAPP_GROUP_LINK;
 
             } catch (error) {
                 alert('Error submitting registration: ' + error.message);
